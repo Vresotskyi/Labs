@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Перевірка числа</title>
+    <script>
+        function checkIfNegative() {
+            let number = document.getElementById("number").value;
+            number = parseFloat(number);
+            let result;
+            if (number < 0) {
+                result = "Число є від'ємним.";
+            } else {
+                result = "Число не є від'ємним.";
+            }
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Перевірка числа</h1>
+    <form onsubmit="return false;">
+        <label for="number">Введіть число:</label>
+        <input type="number" id="number" name="number" required>
+        <br><br>
+        <button type="button" onclick="checkIfNegative()">Перевірити</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>
